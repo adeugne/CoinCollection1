@@ -1,7 +1,7 @@
 ﻿
 namespace CoinCollection
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,7 +31,28 @@ namespace CoinCollection
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            dataGridViewOwn = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            buttonCoinView2 = new Button();
+            label15 = new Label();
+            panel12 = new Panel();
+            labelOwnCountry = new Label();
+            label14 = new Label();
+            panel11 = new Panel();
+            labelOwnPhone = new Label();
+            label13 = new Label();
+            panel10 = new Panel();
+            labelOwnEmail = new Label();
+            label12 = new Label();
+            label1OwnName = new Label();
             tabPage2 = new TabPage();
+            button2 = new Button();
             buttonUserSave = new Button();
             buttonUserChange = new Button();
             buttonUserRemove = new Button();
@@ -87,7 +108,13 @@ namespace CoinCollection
             ColumnCoinMetal = new DataGridViewTextBoxColumn();
             ColumnMintage = new DataGridViewTextBoxColumn();
             openFileDialog1 = new OpenFileDialog();
+            buttonUserAddCoins = new Button();
             tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOwn).BeginInit();
+            panel12.SuspendLayout();
+            panel11.SuspendLayout();
+            panel10.SuspendLayout();
             tabPage2.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -118,6 +145,13 @@ namespace CoinCollection
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(dataGridViewOwn);
+            tabPage1.Controls.Add(buttonCoinView2);
+            tabPage1.Controls.Add(label15);
+            tabPage1.Controls.Add(panel12);
+            tabPage1.Controls.Add(panel11);
+            tabPage1.Controls.Add(panel10);
+            tabPage1.Controls.Add(label1OwnName);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -126,8 +160,181 @@ namespace CoinCollection
             tabPage1.Text = "Головна сторінка";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewOwn
+            // 
+            dataGridViewOwn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOwn.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7 });
+            dataGridViewOwn.Location = new Point(26, 234);
+            dataGridViewOwn.Name = "dataGridViewOwn";
+            dataGridViewOwn.RowHeadersWidth = 51;
+            dataGridViewOwn.Size = new Size(878, 199);
+            dataGridViewOwn.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "Ім'я монети";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "Розташування картинки";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "Країна походження";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "Рік походження";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.HeaderText = "Ціна";
+            dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.HeaderText = "Метал";
+            dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewTextBoxColumn7.HeaderText = "Тираж";
+            dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // buttonCoinView2
+            // 
+            buttonCoinView2.Font = new Font("Segoe UI", 14F);
+            buttonCoinView2.Location = new Point(561, 439);
+            buttonCoinView2.Name = "buttonCoinView2";
+            buttonCoinView2.Size = new Size(343, 41);
+            buttonCoinView2.TabIndex = 6;
+            buttonCoinView2.Text = "Переглянути монету";
+            buttonCoinView2.UseVisualStyleBackColor = true;
+            buttonCoinView2.Click += buttonCoinView2_Click;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label15.Location = new Point(51, 174);
+            label15.Name = "label15";
+            label15.Size = new Size(223, 46);
+            label15.TabIndex = 5;
+            label15.Text = "Ваші монети:";
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(labelOwnCountry);
+            panel12.Controls.Add(label14);
+            panel12.Location = new Point(694, 76);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(192, 83);
+            panel12.TabIndex = 4;
+            // 
+            // labelOwnCountry
+            // 
+            labelOwnCountry.BackColor = Color.Linen;
+            labelOwnCountry.Font = new Font("Segoe UI", 14F);
+            labelOwnCountry.Location = new Point(16, 39);
+            labelOwnCountry.Name = "labelOwnCountry";
+            labelOwnCountry.Size = new Size(161, 34);
+            labelOwnCountry.TabIndex = 10;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(16, 9);
+            label14.Name = "label14";
+            label14.Size = new Size(56, 20);
+            label14.TabIndex = 1;
+            label14.Text = "Країна";
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(labelOwnPhone);
+            panel11.Controls.Add(label13);
+            panel11.Location = new Point(428, 76);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(244, 83);
+            panel11.TabIndex = 4;
+            // 
+            // labelOwnPhone
+            // 
+            labelOwnPhone.BackColor = Color.Linen;
+            labelOwnPhone.Font = new Font("Segoe UI", 14F);
+            labelOwnPhone.Location = new Point(16, 39);
+            labelOwnPhone.Name = "labelOwnPhone";
+            labelOwnPhone.Size = new Size(214, 34);
+            labelOwnPhone.TabIndex = 9;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(16, 8);
+            label13.Name = "label13";
+            label13.Size = new Size(69, 20);
+            label13.TabIndex = 1;
+            label13.Text = "Телефон";
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(labelOwnEmail);
+            panel10.Controls.Add(label12);
+            panel10.Location = new Point(81, 76);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(326, 83);
+            panel10.TabIndex = 3;
+            // 
+            // labelOwnEmail
+            // 
+            labelOwnEmail.BackColor = Color.Linen;
+            labelOwnEmail.Font = new Font("Segoe UI", 14F);
+            labelOwnEmail.Location = new Point(16, 39);
+            labelOwnEmail.Name = "labelOwnEmail";
+            labelOwnEmail.Size = new Size(293, 34);
+            labelOwnEmail.TabIndex = 8;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(16, 9);
+            label12.Name = "label12";
+            label12.Size = new Size(46, 20);
+            label12.TabIndex = 1;
+            label12.Text = "Email";
+            // 
+            // label1OwnName
+            // 
+            label1OwnName.AutoSize = true;
+            label1OwnName.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1OwnName.Location = new Point(51, 19);
+            label1OwnName.Name = "label1OwnName";
+            label1OwnName.Size = new Size(356, 46);
+            label1OwnName.TabIndex = 0;
+            label1OwnName.Text = "Оберіть користувача!";
+            // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(buttonUserAddCoins);
+            tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(buttonUserSave);
             tabPage2.Controls.Add(buttonUserChange);
             tabPage2.Controls.Add(buttonUserRemove);
@@ -145,9 +352,20 @@ namespace CoinCollection
             tabPage2.Text = "Користувачі";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.AntiqueWhite;
+            button2.Location = new Point(786, 440);
+            button2.Name = "button2";
+            button2.Size = new Size(118, 29);
+            button2.TabIndex = 19;
+            button2.Text = "На головну";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // buttonUserSave
             // 
-            buttonUserSave.Location = new Point(475, 440);
+            buttonUserSave.Location = new Point(582, 440);
             buttonUserSave.Name = "buttonUserSave";
             buttonUserSave.Size = new Size(175, 29);
             buttonUserSave.TabIndex = 8;
@@ -157,16 +375,17 @@ namespace CoinCollection
             // 
             // buttonUserChange
             // 
-            buttonUserChange.Location = new Point(353, 440);
+            buttonUserChange.Location = new Point(260, 440);
             buttonUserChange.Name = "buttonUserChange";
             buttonUserChange.Size = new Size(94, 29);
             buttonUserChange.TabIndex = 7;
             buttonUserChange.Text = "Змінити";
             buttonUserChange.UseVisualStyleBackColor = true;
+            buttonUserChange.Click += buttonUserChange_Click_1;
             // 
             // buttonUserRemove
             // 
-            buttonUserRemove.Location = new Point(231, 440);
+            buttonUserRemove.Location = new Point(139, 440);
             buttonUserRemove.Name = "buttonUserRemove";
             buttonUserRemove.Size = new Size(94, 29);
             buttonUserRemove.TabIndex = 6;
@@ -176,7 +395,7 @@ namespace CoinCollection
             // 
             // buttonUserShow
             // 
-            buttonUserShow.Location = new Point(118, 440);
+            buttonUserShow.Location = new Point(24, 440);
             buttonUserShow.Name = "buttonUserShow";
             buttonUserShow.Size = new Size(94, 29);
             buttonUserShow.TabIndex = 5;
@@ -264,7 +483,6 @@ namespace CoinCollection
             // 
             // dataGridViewUser
             // 
-            dataGridViewUser.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewUser.Columns.AddRange(new DataGridViewColumn[] { UserName, UserEmail, UserPhone, UserCountry });
             dataGridViewUser.Location = new Point(3, 185);
@@ -276,35 +494,35 @@ namespace CoinCollection
             // 
             // UserName
             // 
+            UserName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             UserName.HeaderText = "П.І.Б";
             UserName.MinimumWidth = 6;
             UserName.Name = "UserName";
             UserName.ReadOnly = true;
-            UserName.Width = 125;
             // 
             // UserEmail
             // 
+            UserEmail.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             UserEmail.HeaderText = "Email";
             UserEmail.MinimumWidth = 6;
             UserEmail.Name = "UserEmail";
             UserEmail.ReadOnly = true;
-            UserEmail.Width = 125;
             // 
             // UserPhone
             // 
+            UserPhone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             UserPhone.HeaderText = "Телефон";
             UserPhone.MinimumWidth = 6;
             UserPhone.Name = "UserPhone";
             UserPhone.ReadOnly = true;
-            UserPhone.Width = 125;
             // 
             // UserCountry
             // 
+            UserCountry.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             UserCountry.HeaderText = "Країна";
             UserCountry.MinimumWidth = 6;
             UserCountry.Name = "UserCountry";
             UserCountry.ReadOnly = true;
-            UserCountry.Width = 125;
             // 
             // panel1
             // 
@@ -382,6 +600,7 @@ namespace CoinCollection
             buttonCoinChange.TabIndex = 10;
             buttonCoinChange.Text = "Змінити";
             buttonCoinChange.UseVisualStyleBackColor = true;
+            buttonCoinChange.Click += buttonCoinChange_Click;
             // 
             // buttonCoinView
             // 
@@ -467,7 +686,6 @@ namespace CoinCollection
             label8.Size = new Size(41, 20);
             label8.TabIndex = 1;
             label8.Text = "Ціна";
-            label8.Click += label8_Click;
             // 
             // panel6
             // 
@@ -584,7 +802,7 @@ namespace CoinCollection
             // 
             // ColumnCoinPath
             // 
-            ColumnCoinPath.HeaderText = "Шлях";
+            ColumnCoinPath.HeaderText = "Розташування картинки";
             ColumnCoinPath.MinimumWidth = 6;
             ColumnCoinPath.Name = "ColumnCoinPath";
             ColumnCoinPath.Width = 125;
@@ -628,16 +846,35 @@ namespace CoinCollection
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // Form1
+            // buttonUserAddCoins
+            // 
+            buttonUserAddCoins.Location = new Point(381, 440);
+            buttonUserAddCoins.Name = "buttonUserAddCoins";
+            buttonUserAddCoins.Size = new Size(175, 29);
+            buttonUserAddCoins.TabIndex = 20;
+            buttonUserAddCoins.Text = "Додати монети";
+            buttonUserAddCoins.UseVisualStyleBackColor = true;
+            buttonUserAddCoins.Click += buttonUserAddCoins_Click;
+            // 
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(926, 522);
             Controls.Add(tabControl1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "FormMain";
+            Text = "Колекціонер монет";
             tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOwn).EndInit();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
             tabPage2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -688,10 +925,6 @@ namespace CoinCollection
         private Button buttonUserChange;
         private Button buttonUserRemove;
         private Button buttonUserShow;
-        private DataGridViewTextBoxColumn UserName;
-        private DataGridViewTextBoxColumn UserEmail;
-        private DataGridViewTextBoxColumn UserPhone;
-        private DataGridViewTextBoxColumn UserCountry;
         private Button buttonUserSave;
         private Panel panel4;
         private TextBox textBoxCoinName;
@@ -715,6 +948,26 @@ namespace CoinCollection
         private Panel panel9;
         private TextBox textBoxCoinMintage;
         private Label label10;
+        private Button buttonCoinRemove;
+        private Button buttonCoinChange;
+        private Button buttonCoinView;
+        private Button buttonCoinsSave;
+        private Button buttonCoinView2;
+        private Label label15;
+        private Panel panel12;
+        private TextBox textBox3;
+        private Label label14;
+        private Panel panel11;
+        private TextBox textBox2;
+        private Label label13;
+        private Panel panel10;
+        private TextBox textBox1;
+        private Label label12;
+        private Label label1OwnName;
+        private DataGridViewTextBoxColumn UserName;
+        private DataGridViewTextBoxColumn UserEmail;
+        private DataGridViewTextBoxColumn UserPhone;
+        private DataGridViewTextBoxColumn UserCountry;
         private DataGridViewTextBoxColumn ColumnCoinName;
         private DataGridViewTextBoxColumn ColumnCoinPath;
         private DataGridViewTextBoxColumn ColumnCoinCountry;
@@ -722,9 +975,18 @@ namespace CoinCollection
         private DataGridViewTextBoxColumn ColumnCoinPrice;
         private DataGridViewTextBoxColumn ColumnCoinMetal;
         private DataGridViewTextBoxColumn ColumnMintage;
-        private Button buttonCoinRemove;
-        private Button buttonCoinChange;
-        private Button buttonCoinView;
-        private Button buttonCoinsSave;
+        private DataGridView dataGridViewOwn;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private Label labelOwnCountry;
+        private Label labelOwnPhone;
+        private Label labelOwnEmail;
+        private Button button2;
+        private Button buttonUserAddCoins;
     }
 }

@@ -1,64 +1,56 @@
-﻿using CoinCollection.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using CoinCollection.Models;
 
 namespace CoinCollection.Managers
 {
-    public class UsersManager
+    public class UsersManager 
     {
-        private const string UsersFilePath = "files/users.json";
-        private List<User> users;
+        private readonly string _filePath;
+        public List<User> Users { get; private set; } = new List<User>();
 
-        public UsersManager()
+        public UsersManager(string filePath)
         {
-            LoadUsers();
+            _filePath = filePath;
         }
 
-        public void LoadUsers()
+        public async Task LoadAsync()
         {
-            if (File.Exists(UsersFilePath))
+            if (File.Exists(_filePath))
             {
-                string json = File.ReadAllText(UsersFilePath);
-                users = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
-            }
-            else
-            {
-                users = new List<User>();
+                var json = await File.ReadAllTextAsync(_filePath);
+                Users = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
             }
         }
 
-        public void SaveUsers()
+        public async Task SaveAsync()
         {
-            string json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText(UsersFilePath, json);
+            var json = JsonSerializer.Serialize(Users, new JsonSerializerOptions { WriteIndented = true });
+            await File.WriteAllTextAsync(_filePath, json);
         }
 
-        public List<User> GetAllUsers() => users;
-
-        public void AddUser(User newUser)
+        public void AddUser(User user)
         {
-            users.Add(newUser);
-            SaveUsers();
+            Users.Add(user);
         }
 
-        public void UpdateUser(User updatedUser)
+        public void RemoveUser(string uuid)
         {
-            var index = users.FindIndex(u => u.Uuid == updatedUser.Uuid);
-            if (index >= 0)
-            {
-                users[index] = updatedUser;
-                SaveUsers();
-            }
+            Users.RemoveAll(u => u.uuid == uuid);
         }
 
-        public void DeleteUser(string uuid)
+        public void RemoveUserByIndex(int index)
         {
-            users.RemoveAll(u => u.Uuid == uuid);
-            SaveUsers();
+            Users.RemoveAt(index);  
+        }
+
+        public User? GetUser(string uuid)
+        {
+            return Users.Find(u => u.uuid == uuid);
         }
     }
 }

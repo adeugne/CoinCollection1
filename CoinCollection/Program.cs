@@ -14,7 +14,7 @@ namespace CoinCollection
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Form form = new Form1();
+            Form form = new FormMain();
             Application.Run(form);
 
         }
