@@ -52,6 +52,7 @@ namespace CoinCollection
             label12 = new Label();
             label1OwnName = new Label();
             tabPage2 = new TabPage();
+            buttonUserAddCoins = new Button();
             button2 = new Button();
             buttonUserSave = new Button();
             buttonUserChange = new Button();
@@ -108,7 +109,6 @@ namespace CoinCollection
             ColumnCoinMetal = new DataGridViewTextBoxColumn();
             ColumnMintage = new DataGridViewTextBoxColumn();
             openFileDialog1 = new OpenFileDialog();
-            buttonUserAddCoins = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOwn).BeginInit();
@@ -138,9 +138,10 @@ namespace CoinCollection
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(-4, 1);
+            tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(931, 521);
+            tabControl1.Size = new Size(815, 423);
             tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -152,10 +153,11 @@ namespace CoinCollection
             tabPage1.Controls.Add(panel11);
             tabPage1.Controls.Add(panel10);
             tabPage1.Controls.Add(label1OwnName);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(923, 488);
+            tabPage1.Padding = new Padding(3, 2, 3, 2);
+            tabPage1.Size = new Size(807, 395);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Головна сторінка";
             tabPage1.UseVisualStyleBackColor = true;
@@ -164,10 +166,11 @@ namespace CoinCollection
             // 
             dataGridViewOwn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewOwn.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7 });
-            dataGridViewOwn.Location = new Point(26, 234);
+            dataGridViewOwn.Location = new Point(23, 176);
+            dataGridViewOwn.Margin = new Padding(3, 2, 3, 2);
             dataGridViewOwn.Name = "dataGridViewOwn";
             dataGridViewOwn.RowHeadersWidth = 51;
-            dataGridViewOwn.Size = new Size(878, 199);
+            dataGridViewOwn.Size = new Size(768, 167);
             dataGridViewOwn.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -222,9 +225,10 @@ namespace CoinCollection
             // buttonCoinView2
             // 
             buttonCoinView2.Font = new Font("Segoe UI", 14F);
-            buttonCoinView2.Location = new Point(561, 439);
+            buttonCoinView2.Location = new Point(491, 357);
+            buttonCoinView2.Margin = new Padding(3, 2, 3, 2);
             buttonCoinView2.Name = "buttonCoinView2";
-            buttonCoinView2.Size = new Size(343, 41);
+            buttonCoinView2.Size = new Size(300, 31);
             buttonCoinView2.TabIndex = 6;
             buttonCoinView2.Text = "Переглянути монету";
             buttonCoinView2.UseVisualStyleBackColor = true;
@@ -234,9 +238,9 @@ namespace CoinCollection
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label15.Location = new Point(51, 174);
+            label15.Location = new Point(45, 130);
             label15.Name = "label15";
-            label15.Size = new Size(223, 46);
+            label15.Size = new Size(180, 37);
             label15.TabIndex = 5;
             label15.Text = "Ваші монети:";
             // 
@@ -244,26 +248,27 @@ namespace CoinCollection
             // 
             panel12.Controls.Add(labelOwnCountry);
             panel12.Controls.Add(label14);
-            panel12.Location = new Point(694, 76);
+            panel12.Location = new Point(607, 57);
+            panel12.Margin = new Padding(3, 2, 3, 2);
             panel12.Name = "panel12";
-            panel12.Size = new Size(192, 83);
+            panel12.Size = new Size(168, 62);
             panel12.TabIndex = 4;
             // 
             // labelOwnCountry
             // 
             labelOwnCountry.BackColor = Color.Linen;
             labelOwnCountry.Font = new Font("Segoe UI", 14F);
-            labelOwnCountry.Location = new Point(16, 39);
+            labelOwnCountry.Location = new Point(14, 29);
             labelOwnCountry.Name = "labelOwnCountry";
-            labelOwnCountry.Size = new Size(161, 34);
+            labelOwnCountry.Size = new Size(141, 26);
             labelOwnCountry.TabIndex = 10;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(16, 9);
+            label14.Location = new Point(14, 7);
             label14.Name = "label14";
-            label14.Size = new Size(56, 20);
+            label14.Size = new Size(43, 15);
             label14.TabIndex = 1;
             label14.Text = "Країна";
             // 
@@ -271,26 +276,27 @@ namespace CoinCollection
             // 
             panel11.Controls.Add(labelOwnPhone);
             panel11.Controls.Add(label13);
-            panel11.Location = new Point(428, 76);
+            panel11.Location = new Point(374, 57);
+            panel11.Margin = new Padding(3, 2, 3, 2);
             panel11.Name = "panel11";
-            panel11.Size = new Size(244, 83);
+            panel11.Size = new Size(214, 62);
             panel11.TabIndex = 4;
             // 
             // labelOwnPhone
             // 
             labelOwnPhone.BackColor = Color.Linen;
             labelOwnPhone.Font = new Font("Segoe UI", 14F);
-            labelOwnPhone.Location = new Point(16, 39);
+            labelOwnPhone.Location = new Point(14, 29);
             labelOwnPhone.Name = "labelOwnPhone";
-            labelOwnPhone.Size = new Size(214, 34);
+            labelOwnPhone.Size = new Size(187, 26);
             labelOwnPhone.TabIndex = 9;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(16, 8);
+            label13.Location = new Point(14, 6);
             label13.Name = "label13";
-            label13.Size = new Size(69, 20);
+            label13.Size = new Size(55, 15);
             label13.TabIndex = 1;
             label13.Text = "Телефон";
             // 
@@ -298,26 +304,27 @@ namespace CoinCollection
             // 
             panel10.Controls.Add(labelOwnEmail);
             panel10.Controls.Add(label12);
-            panel10.Location = new Point(81, 76);
+            panel10.Location = new Point(71, 57);
+            panel10.Margin = new Padding(3, 2, 3, 2);
             panel10.Name = "panel10";
-            panel10.Size = new Size(326, 83);
+            panel10.Size = new Size(285, 62);
             panel10.TabIndex = 3;
             // 
             // labelOwnEmail
             // 
             labelOwnEmail.BackColor = Color.Linen;
             labelOwnEmail.Font = new Font("Segoe UI", 14F);
-            labelOwnEmail.Location = new Point(16, 39);
+            labelOwnEmail.Location = new Point(14, 29);
             labelOwnEmail.Name = "labelOwnEmail";
-            labelOwnEmail.Size = new Size(293, 34);
+            labelOwnEmail.Size = new Size(256, 26);
             labelOwnEmail.TabIndex = 8;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(16, 9);
+            label12.Location = new Point(14, 7);
             label12.Name = "label12";
-            label12.Size = new Size(46, 20);
+            label12.Size = new Size(36, 15);
             label12.TabIndex = 1;
             label12.Text = "Email";
             // 
@@ -325,9 +332,9 @@ namespace CoinCollection
             // 
             label1OwnName.AutoSize = true;
             label1OwnName.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1OwnName.Location = new Point(51, 19);
+            label1OwnName.Location = new Point(45, 14);
             label1OwnName.Name = "label1OwnName";
-            label1OwnName.Size = new Size(356, 46);
+            label1OwnName.Size = new Size(284, 37);
             label1OwnName.TabIndex = 0;
             label1OwnName.Text = "Оберіть користувача!";
             // 
@@ -344,20 +351,34 @@ namespace CoinCollection
             tabPage2.Controls.Add(panel2);
             tabPage2.Controls.Add(dataGridViewUser);
             tabPage2.Controls.Add(panel1);
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(923, 488);
+            tabPage2.Padding = new Padding(3, 2, 3, 2);
+            tabPage2.Size = new Size(807, 395);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Користувачі";
             tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Click += tabPage2_Click;
+            // 
+            // buttonUserAddCoins
+            // 
+            buttonUserAddCoins.Location = new Point(334, 357);
+            buttonUserAddCoins.Margin = new Padding(3, 2, 3, 2);
+            buttonUserAddCoins.Name = "buttonUserAddCoins";
+            buttonUserAddCoins.Size = new Size(153, 22);
+            buttonUserAddCoins.TabIndex = 20;
+            buttonUserAddCoins.Text = "Додати монети";
+            buttonUserAddCoins.UseVisualStyleBackColor = true;
+            buttonUserAddCoins.Click += buttonUserAddCoins_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.AntiqueWhite;
-            button2.Location = new Point(786, 440);
+            button2.Location = new Point(679, 357);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(118, 29);
+            button2.Size = new Size(103, 22);
             button2.TabIndex = 19;
             button2.Text = "На головну";
             button2.UseVisualStyleBackColor = false;
@@ -365,9 +386,10 @@ namespace CoinCollection
             // 
             // buttonUserSave
             // 
-            buttonUserSave.Location = new Point(582, 440);
+            buttonUserSave.Location = new Point(503, 357);
+            buttonUserSave.Margin = new Padding(3, 2, 3, 2);
             buttonUserSave.Name = "buttonUserSave";
-            buttonUserSave.Size = new Size(175, 29);
+            buttonUserSave.Size = new Size(153, 22);
             buttonUserSave.TabIndex = 8;
             buttonUserSave.Text = "Зберегти в файл";
             buttonUserSave.UseVisualStyleBackColor = true;
@@ -375,9 +397,10 @@ namespace CoinCollection
             // 
             // buttonUserChange
             // 
-            buttonUserChange.Location = new Point(260, 440);
+            buttonUserChange.Location = new Point(230, 357);
+            buttonUserChange.Margin = new Padding(3, 2, 3, 2);
             buttonUserChange.Name = "buttonUserChange";
-            buttonUserChange.Size = new Size(94, 29);
+            buttonUserChange.Size = new Size(82, 22);
             buttonUserChange.TabIndex = 7;
             buttonUserChange.Text = "Змінити";
             buttonUserChange.UseVisualStyleBackColor = true;
@@ -385,9 +408,10 @@ namespace CoinCollection
             // 
             // buttonUserRemove
             // 
-            buttonUserRemove.Location = new Point(139, 440);
+            buttonUserRemove.Location = new Point(123, 357);
+            buttonUserRemove.Margin = new Padding(3, 2, 3, 2);
             buttonUserRemove.Name = "buttonUserRemove";
-            buttonUserRemove.Size = new Size(94, 29);
+            buttonUserRemove.Size = new Size(82, 22);
             buttonUserRemove.TabIndex = 6;
             buttonUserRemove.Text = "Видалити";
             buttonUserRemove.UseVisualStyleBackColor = true;
@@ -395,9 +419,10 @@ namespace CoinCollection
             // 
             // buttonUserShow
             // 
-            buttonUserShow.Location = new Point(24, 440);
+            buttonUserShow.Location = new Point(21, 357);
+            buttonUserShow.Margin = new Padding(3, 2, 3, 2);
             buttonUserShow.Name = "buttonUserShow";
-            buttonUserShow.Size = new Size(94, 29);
+            buttonUserShow.Size = new Size(82, 22);
             buttonUserShow.TabIndex = 5;
             buttonUserShow.Text = "Показати";
             buttonUserShow.UseVisualStyleBackColor = true;
@@ -407,32 +432,35 @@ namespace CoinCollection
             // 
             panel3.Controls.Add(textBoxUserCountry);
             panel3.Controls.Add(label4);
-            panel3.Location = new Point(702, 18);
+            panel3.Location = new Point(614, 14);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(192, 98);
+            panel3.Size = new Size(168, 74);
             panel3.TabIndex = 3;
             // 
             // textBoxUserCountry
             // 
-            textBoxUserCountry.Location = new Point(16, 53);
+            textBoxUserCountry.Location = new Point(14, 40);
+            textBoxUserCountry.Margin = new Padding(3, 2, 3, 2);
             textBoxUserCountry.Name = "textBoxUserCountry";
-            textBoxUserCountry.Size = new Size(158, 27);
+            textBoxUserCountry.Size = new Size(139, 23);
             textBoxUserCountry.TabIndex = 0;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(16, 17);
+            label4.Location = new Point(14, 13);
             label4.Name = "label4";
-            label4.Size = new Size(56, 20);
+            label4.Size = new Size(43, 15);
             label4.TabIndex = 1;
             label4.Text = "Країна";
             // 
             // buttonUserAdd
             // 
-            buttonUserAdd.Location = new Point(400, 141);
+            buttonUserAdd.Location = new Point(350, 106);
+            buttonUserAdd.Margin = new Padding(3, 2, 3, 2);
             buttonUserAdd.Name = "buttonUserAdd";
-            buttonUserAdd.Size = new Size(94, 29);
+            buttonUserAdd.Size = new Size(82, 22);
             buttonUserAdd.TabIndex = 4;
             buttonUserAdd.Text = "Додати";
             buttonUserAdd.UseVisualStyleBackColor = true;
@@ -444,40 +472,43 @@ namespace CoinCollection
             panel2.Controls.Add(label3);
             panel2.Controls.Add(textBoxUserEmail);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(263, 18);
+            panel2.Location = new Point(230, 14);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(387, 98);
+            panel2.Size = new Size(339, 74);
             panel2.TabIndex = 3;
             // 
             // textBoxUserPhone
             // 
-            textBoxUserPhone.Location = new Point(212, 53);
+            textBoxUserPhone.Location = new Point(186, 40);
+            textBoxUserPhone.Margin = new Padding(3, 2, 3, 2);
             textBoxUserPhone.Name = "textBoxUserPhone";
-            textBoxUserPhone.Size = new Size(158, 27);
+            textBoxUserPhone.Size = new Size(139, 23);
             textBoxUserPhone.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(212, 17);
+            label3.Location = new Point(186, 13);
             label3.Name = "label3";
-            label3.Size = new Size(69, 20);
+            label3.Size = new Size(55, 15);
             label3.TabIndex = 3;
             label3.Text = "Телефон";
             // 
             // textBoxUserEmail
             // 
-            textBoxUserEmail.Location = new Point(16, 53);
+            textBoxUserEmail.Location = new Point(14, 40);
+            textBoxUserEmail.Margin = new Padding(3, 2, 3, 2);
             textBoxUserEmail.Name = "textBoxUserEmail";
-            textBoxUserEmail.Size = new Size(158, 27);
+            textBoxUserEmail.Size = new Size(139, 23);
             textBoxUserEmail.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(16, 17);
+            label2.Location = new Point(14, 13);
             label2.Name = "label2";
-            label2.Size = new Size(46, 20);
+            label2.Size = new Size(36, 15);
             label2.TabIndex = 1;
             label2.Text = "Email";
             // 
@@ -485,11 +516,12 @@ namespace CoinCollection
             // 
             dataGridViewUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewUser.Columns.AddRange(new DataGridViewColumn[] { UserName, UserEmail, UserPhone, UserCountry });
-            dataGridViewUser.Location = new Point(3, 185);
+            dataGridViewUser.Location = new Point(3, 139);
+            dataGridViewUser.Margin = new Padding(3, 2, 3, 2);
             dataGridViewUser.Name = "dataGridViewUser";
             dataGridViewUser.ReadOnly = true;
             dataGridViewUser.RowHeadersWidth = 51;
-            dataGridViewUser.Size = new Size(917, 234);
+            dataGridViewUser.Size = new Size(802, 214);
             dataGridViewUser.TabIndex = 3;
             // 
             // UserName
@@ -528,24 +560,26 @@ namespace CoinCollection
             // 
             panel1.Controls.Add(textBoxUserName);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(24, 18);
+            panel1.Location = new Point(21, 14);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(192, 98);
+            panel1.Size = new Size(168, 74);
             panel1.TabIndex = 2;
             // 
             // textBoxUserName
             // 
-            textBoxUserName.Location = new Point(16, 53);
+            textBoxUserName.Location = new Point(14, 40);
+            textBoxUserName.Margin = new Padding(3, 2, 3, 2);
             textBoxUserName.Name = "textBoxUserName";
-            textBoxUserName.Size = new Size(158, 27);
+            textBoxUserName.Size = new Size(139, 23);
             textBoxUserName.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(16, 17);
+            label1.Location = new Point(14, 13);
             label1.Name = "label1";
-            label1.Size = new Size(42, 20);
+            label1.Size = new Size(35, 15);
             label1.TabIndex = 1;
             label1.Text = "П.І.Б.";
             // 
@@ -564,19 +598,21 @@ namespace CoinCollection
             tabPage3.Controls.Add(panel4);
             tabPage3.Controls.Add(button1);
             tabPage3.Controls.Add(dataGridViewCoins);
-            tabPage3.Location = new Point(4, 29);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Margin = new Padding(3, 2, 3, 2);
             tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(923, 488);
+            tabPage3.Padding = new Padding(3, 2, 3, 2);
+            tabPage3.Size = new Size(807, 395);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Монети";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // buttonCoinsSave
             // 
-            buttonCoinsSave.Location = new Point(691, 451);
+            buttonCoinsSave.Location = new Point(613, 357);
+            buttonCoinsSave.Margin = new Padding(3, 2, 3, 2);
             buttonCoinsSave.Name = "buttonCoinsSave";
-            buttonCoinsSave.Size = new Size(199, 29);
+            buttonCoinsSave.Size = new Size(165, 22);
             buttonCoinsSave.TabIndex = 12;
             buttonCoinsSave.Text = "Зберегти";
             buttonCoinsSave.UseVisualStyleBackColor = true;
@@ -584,9 +620,10 @@ namespace CoinCollection
             // 
             // buttonCoinRemove
             // 
-            buttonCoinRemove.Location = new Point(443, 451);
+            buttonCoinRemove.Location = new Point(408, 357);
+            buttonCoinRemove.Margin = new Padding(3, 2, 3, 2);
             buttonCoinRemove.Name = "buttonCoinRemove";
-            buttonCoinRemove.Size = new Size(199, 29);
+            buttonCoinRemove.Size = new Size(169, 22);
             buttonCoinRemove.TabIndex = 11;
             buttonCoinRemove.Text = "Видалити";
             buttonCoinRemove.UseVisualStyleBackColor = true;
@@ -594,9 +631,10 @@ namespace CoinCollection
             // 
             // buttonCoinChange
             // 
-            buttonCoinChange.Location = new Point(226, 451);
+            buttonCoinChange.Location = new Point(209, 357);
+            buttonCoinChange.Margin = new Padding(3, 2, 3, 2);
             buttonCoinChange.Name = "buttonCoinChange";
-            buttonCoinChange.Size = new Size(199, 29);
+            buttonCoinChange.Size = new Size(167, 22);
             buttonCoinChange.TabIndex = 10;
             buttonCoinChange.Text = "Змінити";
             buttonCoinChange.UseVisualStyleBackColor = true;
@@ -604,9 +642,10 @@ namespace CoinCollection
             // 
             // buttonCoinView
             // 
-            buttonCoinView.Location = new Point(12, 451);
+            buttonCoinView.Location = new Point(12, 357);
+            buttonCoinView.Margin = new Padding(3, 2, 3, 2);
             buttonCoinView.Name = "buttonCoinView";
-            buttonCoinView.Size = new Size(199, 29);
+            buttonCoinView.Size = new Size(166, 22);
             buttonCoinView.TabIndex = 9;
             buttonCoinView.Text = "Перегляд монети";
             buttonCoinView.UseVisualStyleBackColor = true;
@@ -616,24 +655,26 @@ namespace CoinCollection
             // 
             panel9.Controls.Add(textBoxCoinMintage);
             panel9.Controls.Add(label10);
-            panel9.Location = new Point(408, 127);
+            panel9.Location = new Point(357, 95);
+            panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
-            panel9.Size = new Size(192, 98);
+            panel9.Size = new Size(168, 74);
             panel9.TabIndex = 8;
             // 
             // textBoxCoinMintage
             // 
-            textBoxCoinMintage.Location = new Point(16, 53);
+            textBoxCoinMintage.Location = new Point(14, 40);
+            textBoxCoinMintage.Margin = new Padding(3, 2, 3, 2);
             textBoxCoinMintage.Name = "textBoxCoinMintage";
-            textBoxCoinMintage.Size = new Size(158, 27);
+            textBoxCoinMintage.Size = new Size(139, 23);
             textBoxCoinMintage.TabIndex = 0;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(16, 17);
+            label10.Location = new Point(14, 13);
             label10.Name = "label10";
-            label10.Size = new Size(54, 20);
+            label10.Size = new Size(42, 15);
             label10.TabIndex = 1;
             label10.Text = "Тираж";
             // 
@@ -641,24 +682,26 @@ namespace CoinCollection
             // 
             panel8.Controls.Add(textBoxCoinMetal);
             panel8.Controls.Add(label9);
-            panel8.Location = new Point(210, 127);
+            panel8.Location = new Point(184, 95);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(192, 98);
+            panel8.Size = new Size(168, 74);
             panel8.TabIndex = 7;
             // 
             // textBoxCoinMetal
             // 
-            textBoxCoinMetal.Location = new Point(16, 53);
+            textBoxCoinMetal.Location = new Point(14, 40);
+            textBoxCoinMetal.Margin = new Padding(3, 2, 3, 2);
             textBoxCoinMetal.Name = "textBoxCoinMetal";
-            textBoxCoinMetal.Size = new Size(158, 27);
+            textBoxCoinMetal.Size = new Size(139, 23);
             textBoxCoinMetal.TabIndex = 0;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(16, 17);
+            label9.Location = new Point(14, 13);
             label9.Name = "label9";
-            label9.Size = new Size(52, 20);
+            label9.Size = new Size(42, 15);
             label9.TabIndex = 1;
             label9.Text = "Метал";
             // 
@@ -666,24 +709,26 @@ namespace CoinCollection
             // 
             panel7.Controls.Add(textBoxCoinPrice);
             panel7.Controls.Add(label8);
-            panel7.Location = new Point(12, 127);
+            panel7.Location = new Point(10, 95);
+            panel7.Margin = new Padding(3, 2, 3, 2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(192, 98);
+            panel7.Size = new Size(168, 74);
             panel7.TabIndex = 6;
             // 
             // textBoxCoinPrice
             // 
-            textBoxCoinPrice.Location = new Point(16, 53);
+            textBoxCoinPrice.Location = new Point(14, 40);
+            textBoxCoinPrice.Margin = new Padding(3, 2, 3, 2);
             textBoxCoinPrice.Name = "textBoxCoinPrice";
-            textBoxCoinPrice.Size = new Size(158, 27);
+            textBoxCoinPrice.Size = new Size(139, 23);
             textBoxCoinPrice.TabIndex = 0;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(16, 17);
+            label8.Location = new Point(14, 13);
             label8.Name = "label8";
-            label8.Size = new Size(41, 20);
+            label8.Size = new Size(32, 15);
             label8.TabIndex = 1;
             label8.Text = "Ціна";
             // 
@@ -691,24 +736,26 @@ namespace CoinCollection
             // 
             panel6.Controls.Add(textBoxCoinYear);
             panel6.Controls.Add(label7);
-            panel6.Location = new Point(408, 23);
+            panel6.Location = new Point(357, 17);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(192, 98);
+            panel6.Size = new Size(168, 74);
             panel6.TabIndex = 5;
             // 
             // textBoxCoinYear
             // 
-            textBoxCoinYear.Location = new Point(16, 53);
+            textBoxCoinYear.Location = new Point(14, 40);
+            textBoxCoinYear.Margin = new Padding(3, 2, 3, 2);
             textBoxCoinYear.Name = "textBoxCoinYear";
-            textBoxCoinYear.Size = new Size(158, 27);
+            textBoxCoinYear.Size = new Size(139, 23);
             textBoxCoinYear.TabIndex = 0;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(16, 17);
+            label7.Location = new Point(14, 13);
             label7.Name = "label7";
-            label7.Size = new Size(28, 20);
+            label7.Size = new Size(23, 15);
             label7.TabIndex = 1;
             label7.Text = "Рік";
             // 
@@ -716,33 +763,36 @@ namespace CoinCollection
             // 
             panel5.Controls.Add(textBoxCoinCountry);
             panel5.Controls.Add(label6);
-            panel5.Location = new Point(210, 23);
+            panel5.Location = new Point(184, 17);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(192, 98);
+            panel5.Size = new Size(168, 74);
             panel5.TabIndex = 4;
             // 
             // textBoxCoinCountry
             // 
-            textBoxCoinCountry.Location = new Point(16, 53);
+            textBoxCoinCountry.Location = new Point(14, 40);
+            textBoxCoinCountry.Margin = new Padding(3, 2, 3, 2);
             textBoxCoinCountry.Name = "textBoxCoinCountry";
-            textBoxCoinCountry.Size = new Size(158, 27);
+            textBoxCoinCountry.Size = new Size(139, 23);
             textBoxCoinCountry.TabIndex = 0;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(16, 17);
+            label6.Location = new Point(14, 13);
             label6.Name = "label6";
-            label6.Size = new Size(56, 20);
+            label6.Size = new Size(43, 15);
             label6.TabIndex = 1;
             label6.Text = "Країна";
             // 
             // pictureBoxCoin
             // 
             pictureBoxCoin.BackColor = Color.IndianRed;
-            pictureBoxCoin.Location = new Point(701, 23);
+            pictureBoxCoin.Location = new Point(613, 17);
+            pictureBoxCoin.Margin = new Padding(3, 2, 3, 2);
             pictureBoxCoin.Name = "pictureBoxCoin";
-            pictureBoxCoin.Size = new Size(165, 156);
+            pictureBoxCoin.Size = new Size(144, 126);
             pictureBoxCoin.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxCoin.TabIndex = 4;
             pictureBoxCoin.TabStop = false;
@@ -752,32 +802,35 @@ namespace CoinCollection
             // 
             panel4.Controls.Add(textBoxCoinName);
             panel4.Controls.Add(label5);
-            panel4.Location = new Point(12, 23);
+            panel4.Location = new Point(10, 17);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(192, 98);
+            panel4.Size = new Size(168, 74);
             panel4.TabIndex = 3;
             // 
             // textBoxCoinName
             // 
-            textBoxCoinName.Location = new Point(16, 53);
+            textBoxCoinName.Location = new Point(14, 40);
+            textBoxCoinName.Margin = new Padding(3, 2, 3, 2);
             textBoxCoinName.Name = "textBoxCoinName";
-            textBoxCoinName.Size = new Size(158, 27);
+            textBoxCoinName.Size = new Size(139, 23);
             textBoxCoinName.TabIndex = 0;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(16, 17);
+            label5.Location = new Point(14, 13);
             label5.Name = "label5";
-            label5.Size = new Size(114, 20);
+            label5.Size = new Size(89, 15);
             label5.TabIndex = 1;
             label5.Text = "Назва монетки";
             // 
             // button1
             // 
-            button1.Location = new Point(701, 196);
+            button1.Location = new Point(613, 147);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(165, 29);
+            button1.Size = new Size(144, 22);
             button1.TabIndex = 1;
             button1.Text = "Додати";
             button1.UseVisualStyleBackColor = true;
@@ -787,10 +840,11 @@ namespace CoinCollection
             // 
             dataGridViewCoins.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCoins.Columns.AddRange(new DataGridViewColumn[] { ColumnCoinName, ColumnCoinPath, ColumnCoinCountry, ColumnCoinYear, ColumnCoinPrice, ColumnCoinMetal, ColumnMintage });
-            dataGridViewCoins.Location = new Point(12, 263);
+            dataGridViewCoins.Location = new Point(10, 173);
+            dataGridViewCoins.Margin = new Padding(3, 2, 3, 2);
             dataGridViewCoins.Name = "dataGridViewCoins";
             dataGridViewCoins.RowHeadersWidth = 51;
-            dataGridViewCoins.Size = new Size(878, 175);
+            dataGridViewCoins.Size = new Size(768, 180);
             dataGridViewCoins.TabIndex = 0;
             // 
             // ColumnCoinName
@@ -846,23 +900,14 @@ namespace CoinCollection
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // buttonUserAddCoins
-            // 
-            buttonUserAddCoins.Location = new Point(381, 440);
-            buttonUserAddCoins.Name = "buttonUserAddCoins";
-            buttonUserAddCoins.Size = new Size(175, 29);
-            buttonUserAddCoins.TabIndex = 20;
-            buttonUserAddCoins.Text = "Додати монети";
-            buttonUserAddCoins.UseVisualStyleBackColor = true;
-            buttonUserAddCoins.Click += buttonUserAddCoins_Click;
-            // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(926, 522);
+            ClientSize = new Size(810, 424);
             Controls.Add(tabControl1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormMain";
             Text = "Колекціонер монет";
             tabControl1.ResumeLayout(false);

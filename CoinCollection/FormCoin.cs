@@ -21,10 +21,10 @@ namespace CoinCollection
         {
             InitializeComponent();
             labelCoinName.Text = coin.name;
-            labelCoinDescription.Text = coin.description;
             labelCoinPrice.Text = coin.price.ToString();
             labelCoinMintage.Text = coin.mintage.ToString();
             labelCoinYear.Text = coin.year.ToString();
+            labelCoinDescription.Text = $" Метал: {coin.metal}; Тираж: {coin.mintage}";
             if (coin.path != null && coin.path.Length > 0)
                 pictureBox1.Load(coin.path);
         }
@@ -32,6 +32,31 @@ namespace CoinCollection
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCoinDescription_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCoinName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

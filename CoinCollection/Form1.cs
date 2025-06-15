@@ -14,7 +14,7 @@ using MyUser = CoinCollection.Models.User;
 
 namespace CoinCollection
 {
-    
+
     public partial class FormMain : Form
     {
         private string jsonFilePathUsers = "users.json";
@@ -33,7 +33,7 @@ namespace CoinCollection
             _coinsManager = new CoinsManager(jsonFilePathCoins);
             _usersManager = new UsersManager(jsonFilePathUsers);
 
-            
+
 
             LoadDataAsync();
         }
@@ -66,7 +66,7 @@ namespace CoinCollection
 
                 if (_own != null)
                 {
-                    // Знаходимо користувача за Uuid
+                    // Знаходимо користувача за Uuid 
                     _ownUser = _usersManager.Users.FirstOrDefault(u => u.uuid == _own.Uuid);
 
                     UpdateMainTab();
@@ -166,7 +166,7 @@ namespace CoinCollection
             foreach (DataGridViewRow row in dataGridViewUser.SelectedRows)
             {
                 int index = row.Index;
-                    _usersManager.RemoveUserByIndex(index);
+                _usersManager.RemoveUserByIndex(index);
             }
 
 
@@ -237,7 +237,7 @@ namespace CoinCollection
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-           
+
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -299,18 +299,19 @@ namespace CoinCollection
 
                 bool coinExists = false;
 
-                foreach(User user in _usersManager.Users)
+                foreach (User user in _usersManager.Users)
                 {
-                    foreach(String uuid in user.coins)
+                    foreach (String uuid in user.coins)
                     {
-                        if(coin.uuid == uuid)
+                        if (coin.uuid == uuid)
                         {
                             coinExists = true;
                             break;
                         }
                     }
 
-                    if (coinExists) {
+                    if (coinExists)
+                    {
                         break;
                     }
                 }
@@ -538,6 +539,11 @@ namespace CoinCollection
             {
                 MessageBox.Show("Вибір відмінено.");
             }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
