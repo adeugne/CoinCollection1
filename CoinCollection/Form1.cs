@@ -285,6 +285,7 @@ namespace CoinCollection
                 metal = metal,
                 mintage = long.Parse(mintage)
             };
+
             _coinsManager.AddCoin(newCoin);
             UpdateCoinsList();
 
@@ -419,21 +420,22 @@ namespace CoinCollection
             var coin = _coinsManager.Coins[index];
 
             // Зчитуємо нові значення з полів форми
-            string newName = textBoxCoinName.Text;
-            string newPath = pictureBoxCoin.Image?.Tag?.ToString() ?? coin.path;
-            string newCountry = textBoxCoinCountry.Text;
-            string yearText = textBoxCoinYear.Text;
-            string priceText = textBoxCoinPrice.Text;
-            string metal = textBoxCoinMetal.Text;
-            string mintageText = textBoxCoinMintage.Text;
+            string newName = string.IsNullOrWhiteSpace(textBoxCoinName.Text) == false ? textBoxCoinName.Text : coin.name;
+            string newPath = _coinPicturePath ?? coin.path;
+            string newCountry = string.IsNullOrWhiteSpace(textBoxCoinCountry.Text) == false ? textBoxCoinCountry.Text : coin.country;
+            string yearText = string.IsNullOrWhiteSpace(textBoxCoinYear.Text) == false ? textBoxCoinYear.Text : coin.year.ToString();
+            string priceText = string.IsNullOrWhiteSpace(textBoxCoinPrice.Text) == false ? textBoxCoinPrice.Text : coin.price.ToString();
+            string metal = string.IsNullOrWhiteSpace(textBoxCoinMetal.Text) == false ? textBoxCoinMetal.Text : coin.metal;
+            string mintageText = string.IsNullOrWhiteSpace(textBoxCoinMintage.Text) == false ? textBoxCoinMintage.Text : coin.mintage.ToString();
 
-            if (string.IsNullOrWhiteSpace(newName) || string.IsNullOrWhiteSpace(newCountry) ||
-                string.IsNullOrWhiteSpace(yearText) || string.IsNullOrWhiteSpace(priceText) ||
-                string.IsNullOrWhiteSpace(metal) || string.IsNullOrWhiteSpace(mintageText))
-            {
-                MessageBox.Show("Будь ласка, заповніть всі поля!");
-                return;
-            }
+
+            //if (string.IsNullOrWhiteSpace(newName) || string.IsNullOrWhiteSpace(newCountry) ||
+            //    string.IsNullOrWhiteSpace(yearText) || string.IsNullOrWhiteSpace(priceText) ||
+            //    string.IsNullOrWhiteSpace(metal) || string.IsNullOrWhiteSpace(mintageText))
+            //{
+            //    MessageBox.Show("Будь ласка, заповніть всі поля!");
+            //    return;
+            //}
 
             if (!int.TryParse(yearText, out int newYear) ||
                 !decimal.TryParse(priceText, out decimal newPrice) ||
@@ -455,7 +457,7 @@ namespace CoinCollection
 
             // Оновлюємо список монет у DataGridView
             UpdateCoinsList();
-
+            UpdateMainTab();
             MessageBox.Show("Дані монети успішно оновлено!");
         }
 
@@ -542,6 +544,109 @@ namespace CoinCollection
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewOwn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+   
+        }
+
+        // Замість dataGridView1 та textBoxUuid використовуйте dataGridViewOwn та _ownUser
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewOwn.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Потрібно вибрати одну монету для видалення!");
+                return;
+            }
+
+            int selectedIndex = dataGridViewOwn.SelectedRows[0].Index;
+            if (_ownUser == null || _ownUser.coins == null || selectedIndex < 0 || selectedIndex >= _ownUser.coins.Count)
+            {
+                MessageBox.Show("Некоректний вибір або користувач не знайдений.");
+                return;
+            }
+
+            string uuidToDelete = _ownUser.coins[selectedIndex];
+
+            _ownUser.coins.RemoveAt(selectedIndex);
+            UpdateMainTab();
+            MessageBox.Show($"Монету: {uuidToDelete} видалено у власника.");
+        }
+
+        private async void button3_Click_1(object sender, EventArgs e)
+        {
+            if (_ownUser == null)
+            {
+                MessageBox.Show("Власник не вибраний!");
+                return;
+            }
+
+            // Зберігаємо користувача з оновленим списком монет
+            await _usersManager.SaveAsync();
+
+            // Оновлюємо файл own.json з інформацією про власника та його монети
+            var ownInfo = new
+            {
+                Uuid = _ownUser.uuid,
+                Name = _ownUser.name,
+                Coins = _ownUser.coins
+            };
+            string json = JsonSerializer.Serialize(ownInfo, new JsonSerializerOptions { WriteIndented = true });
+            await File.WriteAllTextAsync("own.json", json);
+
+            MessageBox.Show("Інформацію про монети користувача успішно збережено!");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Додаємо метод для пошуку монет за іменем
+        private void buttonCoinSearch_Click(object sender, EventArgs e)
+        {
+            string searchName = textBox2.Text.Trim();
+            //if (string.IsNullOrWhiteSpace(searchName))
+            //{
+            //    return;
+            //}
+
+            var foundCoins = _coinsManager.Coins
+                .Where(c => c.name != null && c.name.Contains(searchName, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            dataGridViewCoins.Rows.Clear();
+            foreach (var coin in foundCoins)
+            {
+                dataGridViewCoins.Rows.Add(coin.name, coin.path, coin.country, coin.year, coin.price, coin.metal, coin.mintage);
+            }
+        }
+
+        // Додаємо метод для пошуку користувачів за іменем
+        private void buttonUserSearch_Click(object sender, EventArgs e)
+        {
+            string searchName = textBox1.Text.Trim();
+
+            var foundUsers = _usersManager.Users
+                .Where(u => u.name != null && u.name.Contains(searchName, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            dataGridViewUser.Rows.Clear();
+            foreach (var user in foundUsers)
+            {
+                dataGridViewUser.Rows.Add(user.name, user.email, user.phone, user.country);
+            }
+        }
+
+        private void dataGridViewUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

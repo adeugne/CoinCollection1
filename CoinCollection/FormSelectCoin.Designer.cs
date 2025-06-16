@@ -37,17 +37,19 @@
             // dataGridViewCoinsPreview
             // 
             dataGridViewCoinsPreview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCoinsPreview.Location = new Point(12, 12);
+            dataGridViewCoinsPreview.Location = new Point(10, 9);
+            dataGridViewCoinsPreview.Margin = new Padding(3, 2, 3, 2);
             dataGridViewCoinsPreview.Name = "dataGridViewCoinsPreview";
             dataGridViewCoinsPreview.RowHeadersWidth = 51;
-            dataGridViewCoinsPreview.Size = new Size(878, 508);
+            dataGridViewCoinsPreview.Size = new Size(768, 381);
             dataGridViewCoinsPreview.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(596, 537);
+            button1.Location = new Point(522, 403);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(135, 47);
+            button1.Size = new Size(118, 35);
             button1.TabIndex = 2;
             button1.Text = "Обрано";
             button1.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // buttonCancelSelect
             // 
-            buttonCancelSelect.Location = new Point(751, 538);
+            buttonCancelSelect.Location = new Point(657, 404);
+            buttonCancelSelect.Margin = new Padding(3, 2, 3, 2);
             buttonCancelSelect.Name = "buttonCancelSelect";
-            buttonCancelSelect.Size = new Size(139, 44);
+            buttonCancelSelect.Size = new Size(122, 33);
             buttonCancelSelect.TabIndex = 3;
             buttonCancelSelect.Text = "Відміна";
             buttonCancelSelect.UseVisualStyleBackColor = true;
@@ -65,12 +68,13 @@
             // 
             // FormSelectCoin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(903, 598);
+            ClientSize = new Size(786, 442);
             Controls.Add(buttonCancelSelect);
             Controls.Add(button1);
             Controls.Add(dataGridViewCoinsPreview);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormSelectCoin";
             Text = "Оберіть монету для додавання";
             ((System.ComponentModel.ISupportInitialize)dataGridViewCoinsPreview).EndInit();

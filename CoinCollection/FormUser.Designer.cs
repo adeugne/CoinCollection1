@@ -59,9 +59,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(18, 34);
+            label1.Location = new Point(16, 26);
             label1.Name = "label1";
-            label1.Size = new Size(35, 20);
+            label1.Size = new Size(28, 15);
             label1.TabIndex = 0;
             label1.Text = "Ім'я";
             // 
@@ -69,18 +69,19 @@
             // 
             panel1.Controls.Add(labelUserName);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(38, 27);
+            panel1.Location = new Point(33, 20);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(823, 92);
+            panel1.Size = new Size(720, 69);
             panel1.TabIndex = 2;
             // 
             // labelUserName
             // 
             labelUserName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelUserName.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelUserName.Location = new Point(105, 16);
+            labelUserName.Location = new Point(92, 12);
             labelUserName.Name = "labelUserName";
-            labelUserName.Size = new Size(676, 55);
+            labelUserName.Size = new Size(592, 41);
             labelUserName.TabIndex = 1;
             labelUserName.Text = "Користувач Користувач Користувач";
             labelUserName.TextAlign = ContentAlignment.MiddleCenter;
@@ -88,9 +89,10 @@
             // buttonUserClose
             // 
             buttonUserClose.Font = new Font("Segoe UI", 14F);
-            buttonUserClose.Location = new Point(602, 263);
+            buttonUserClose.Location = new Point(527, 197);
+            buttonUserClose.Margin = new Padding(3, 2, 3, 2);
             buttonUserClose.Name = "buttonUserClose";
-            buttonUserClose.Size = new Size(130, 44);
+            buttonUserClose.Size = new Size(114, 33);
             buttonUserClose.TabIndex = 3;
             buttonUserClose.Text = "Закрити";
             buttonUserClose.UseVisualStyleBackColor = true;
@@ -100,17 +102,18 @@
             // 
             panel2.Controls.Add(labelUserEmail);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(38, 134);
+            panel2.Location = new Point(33, 100);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(395, 81);
+            panel2.Size = new Size(346, 61);
             panel2.TabIndex = 3;
             // 
             // labelUserEmail
             // 
             labelUserEmail.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelUserEmail.Location = new Point(15, 29);
+            labelUserEmail.Location = new Point(13, 22);
             labelUserEmail.Name = "labelUserEmail";
-            labelUserEmail.Size = new Size(363, 44);
+            labelUserEmail.Size = new Size(318, 33);
             labelUserEmail.TabIndex = 1;
             labelUserEmail.Text = "Електронна пошта";
             labelUserEmail.TextAlign = ContentAlignment.MiddleLeft;
@@ -118,9 +121,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(5, 2);
+            label3.Location = new Point(4, 2);
             label3.Name = "label3";
-            label3.Size = new Size(138, 20);
+            label3.Size = new Size(110, 15);
             label3.TabIndex = 0;
             label3.Text = "Електронна поштв";
             // 
@@ -128,17 +131,18 @@
             // 
             panel3.Controls.Add(labelUserPhone);
             panel3.Controls.Add(label5);
-            panel3.Location = new Point(466, 134);
+            panel3.Location = new Point(408, 100);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(395, 81);
+            panel3.Size = new Size(346, 61);
             panel3.TabIndex = 4;
             // 
             // labelUserPhone
             // 
             labelUserPhone.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelUserPhone.Location = new Point(16, 25);
+            labelUserPhone.Location = new Point(14, 19);
             labelUserPhone.Name = "labelUserPhone";
-            labelUserPhone.Size = new Size(362, 49);
+            labelUserPhone.Size = new Size(317, 37);
             labelUserPhone.TabIndex = 1;
             labelUserPhone.Text = "Телефон Телефон";
             labelUserPhone.TextAlign = ContentAlignment.MiddleLeft;
@@ -148,7 +152,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(2, 2);
             label5.Name = "label5";
-            label5.Size = new Size(69, 20);
+            label5.Size = new Size(55, 15);
             label5.TabIndex = 0;
             label5.Text = "Телефон";
             // 
@@ -156,17 +160,18 @@
             // 
             panel4.Controls.Add(labelUserCountry);
             panel4.Controls.Add(label7);
-            panel4.Location = new Point(38, 240);
+            panel4.Location = new Point(33, 180);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(395, 81);
+            panel4.Size = new Size(346, 61);
             panel4.TabIndex = 5;
             // 
             // labelUserCountry
             // 
             labelUserCountry.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelUserCountry.Location = new Point(18, 23);
+            labelUserCountry.Location = new Point(16, 17);
             labelUserCountry.Name = "labelUserCountry";
-            labelUserCountry.Size = new Size(360, 49);
+            labelUserCountry.Size = new Size(315, 37);
             labelUserCountry.TabIndex = 1;
             labelUserCountry.Text = "Країна Країна";
             labelUserCountry.TextAlign = ContentAlignment.MiddleLeft;
@@ -174,9 +179,9 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(5, 2);
+            label7.Location = new Point(4, 2);
             label7.Name = "label7";
-            label7.Size = new Size(56, 20);
+            label7.Size = new Size(43, 15);
             label7.TabIndex = 0;
             label7.Text = "Країна";
             // 
@@ -184,10 +189,11 @@
             // 
             dataGridViewOwn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewOwn.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7 });
-            dataGridViewOwn.Location = new Point(38, 354);
+            dataGridViewOwn.Location = new Point(33, 266);
+            dataGridViewOwn.Margin = new Padding(3, 2, 3, 2);
             dataGridViewOwn.Name = "dataGridViewOwn";
             dataGridViewOwn.RowHeadersWidth = 51;
-            dataGridViewOwn.Size = new Size(878, 253);
+            dataGridViewOwn.Size = new Size(768, 190);
             dataGridViewOwn.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
@@ -241,17 +247,18 @@
             // 
             // FormUser
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(954, 634);
+            ClientSize = new Size(835, 476);
             Controls.Add(dataGridViewOwn);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(buttonUserClose);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormUser";
-            Text = "FormUser";
+            Text = "Користувач";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

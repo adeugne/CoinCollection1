@@ -24,7 +24,7 @@ namespace CoinCollection
             labelCoinPrice.Text = coin.price.ToString();
             labelCoinMintage.Text = coin.mintage.ToString();
             labelCoinYear.Text = coin.year.ToString();
-            labelCoinDescription.Text = $" Метал: {coin.metal}; Тираж: {coin.mintage}";
+            labelCoinDescription.Text = $" Метал: {coin.metal}; Країна: {coin.country}";
             if (coin.path != null && coin.path.Length > 0)
                 pictureBox1.Load(coin.path);
         }
@@ -55,6 +55,11 @@ namespace CoinCollection
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormCoin_Load(object sender, EventArgs e)
         {
 
         }

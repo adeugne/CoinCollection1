@@ -244,7 +244,8 @@
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormCoin";
-            Text = "FormCoin";
+            Text = "Перегляд монети";
+            Load += FormCoin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
