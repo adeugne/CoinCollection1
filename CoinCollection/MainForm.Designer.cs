@@ -202,6 +202,7 @@ namespace CoinCollection
             dataGridViewOwn.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7 });
             dataGridViewOwn.Location = new Point(12, 169);
             dataGridViewOwn.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewOwn.MultiSelect = false;
             dataGridViewOwn.Name = "dataGridViewOwn";
             dataGridViewOwn.RowHeadersWidth = 51;
             dataGridViewOwn.Size = new Size(768, 283);
@@ -584,6 +585,7 @@ namespace CoinCollection
             dataGridViewUser.Columns.AddRange(new DataGridViewColumn[] { UserName, UserEmail, UserPhone, UserCountry });
             dataGridViewUser.Location = new Point(6, 188);
             dataGridViewUser.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewUser.MultiSelect = false;
             dataGridViewUser.Name = "dataGridViewUser";
             dataGridViewUser.ReadOnly = true;
             dataGridViewUser.RowHeadersWidth = 51;
@@ -941,10 +943,12 @@ namespace CoinCollection
             dataGridViewCoins.Columns.AddRange(new DataGridViewColumn[] { ColumnCoinName, ColumnCoinPath, ColumnCoinCountry, ColumnCoinYear, ColumnCoinPrice, ColumnCoinMetal, ColumnMintage });
             dataGridViewCoins.Location = new Point(10, 248);
             dataGridViewCoins.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewCoins.MultiSelect = false;
             dataGridViewCoins.Name = "dataGridViewCoins";
             dataGridViewCoins.RowHeadersWidth = 51;
             dataGridViewCoins.Size = new Size(768, 207);
             dataGridViewCoins.TabIndex = 0;
+            dataGridViewCoins.CellContentClick += dataGridViewCoins_CellContentClick;
             // 
             // ColumnCoinName
             // 

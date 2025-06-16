@@ -36,9 +36,12 @@
             // 
             // dataGridViewCoinsPreview
             // 
+            dataGridViewCoinsPreview.AllowUserToAddRows = false;
+            dataGridViewCoinsPreview.AllowUserToDeleteRows = false;
             dataGridViewCoinsPreview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCoinsPreview.Location = new Point(10, 9);
             dataGridViewCoinsPreview.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewCoinsPreview.MultiSelect = false;
             dataGridViewCoinsPreview.Name = "dataGridViewCoinsPreview";
             dataGridViewCoinsPreview.RowHeadersWidth = 51;
             dataGridViewCoinsPreview.Size = new Size(768, 381);

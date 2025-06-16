@@ -550,7 +550,7 @@ namespace CoinCollection
 
         private void dataGridViewOwn_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-   
+
         }
 
         // Замість dataGridView1 та textBoxUuid використовуйте dataGridViewOwn та _ownUser
@@ -647,6 +647,11 @@ namespace CoinCollection
         }
 
         private void dataGridViewUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewCoins_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

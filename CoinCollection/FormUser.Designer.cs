@@ -187,10 +187,13 @@
             // 
             // dataGridViewOwn
             // 
+            dataGridViewOwn.AllowUserToAddRows = false;
+            dataGridViewOwn.AllowUserToDeleteRows = false;
             dataGridViewOwn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewOwn.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7 });
             dataGridViewOwn.Location = new Point(33, 266);
             dataGridViewOwn.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewOwn.MultiSelect = false;
             dataGridViewOwn.Name = "dataGridViewOwn";
             dataGridViewOwn.RowHeadersWidth = 51;
             dataGridViewOwn.Size = new Size(768, 190);
