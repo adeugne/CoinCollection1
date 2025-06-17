@@ -15,7 +15,6 @@ namespace CoinCollection.Models
         public decimal price { get; set; }        // Ціна
         public string metal { get; set; }         // Метал
         public long mintage { get; set; }         // Тираж
-        public string description { get; set; }   // Опис
         public string path { get; set; }     // Шлях до зображення
     }
 }
